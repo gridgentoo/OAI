@@ -1,3 +1,6 @@
+[OpenAirInterface-OAI] CI-Training-2019-06-25  
+https://docs.google.com/presentation/d/1e4qFYCwWCU5-1LjxDXmOeo72B1kAUsFYfpG-wKvrkH0/  
+
 Для установки linux-image-4.15.0-20-lowlatency в Ubuntu  
 sudo apt update  
 sudo apt install linux-image-4.15.0-20-lowlatency  
