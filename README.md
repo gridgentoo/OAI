@@ -1,3 +1,9 @@
+linux-image-4.15.0-20-lowlatency
+https://docs.google.com/presentation/d/1lngP0wc5VKEnFnM3yV4seew32iDsh_aR7Xb94NpJNfU/edit#slide=id.g74c2d2ade3_0_5
+
+linux-image-4.15.0-15-lowlatency
+https://docs.google.com/presentation/d/1iLfxK4n46lavcm4KGW3jXlZrAKtdSmccGE2kGhzMRNM/edit#slide=id.g739ed144e2_0_28
+
 # Docker Setup - Automated Scripts Installation
 ENB and EPC entities can be a single container, however the logical scalable architecture perspective, it is better to be single EPC and many ENB containers.
 
