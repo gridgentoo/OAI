@@ -1,0 +1,49 @@
+version: "2"
+
+services:
+  epc:
+    cap_add:
+     - ALL
+    image: kannan1981/epc_latest:latest
+    hostname: epc
+    container_name: epc
+    privileged: true
+    volumes:
+     - /dev:/dev
+     - /lib/modules:/lib/modules
+     - /tmp/oai/conf/mme.conf:/usr/local/etc/oai/mme.conf
+     - /tmp/oai/conf/spgw.conf:/usr/local/etc/oai/spgw.conf
+    command: ['./docker-entrypoint.sh']
+    entrypoint:
+     - /bin/bash
+    networks:
+     default:
+       ipv4_address: 172.19.0.2
+    tty: true
+
+  enb:
+    image: kannan1981/enb_latest:latest
+    hostname: enb
+    depends_on:
+     - epc
+    container_name: enb
+    privileged: true
+    volumes:
+     - /dev/bus/usb:/dev/bus/usb
+     - /tmp/oai/conf/enb.10MHz.b200:/home/opencells-mods/enb.10MHz.b200
+    command: ['./docker-entrypoint.sh']
+    entrypoint:
+     - /bin/bash
+    networks:
+     default:
+       ipv4_address: 172.19.0.3
+    tty: true
+  
+networks:
+ default:
+  driver: bridge
+  ipam:
+   driver: default
+   config:
+    - subnet: 172.19.0.0/16
+      gateway: 172.19.0.1
