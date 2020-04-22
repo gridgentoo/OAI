@@ -1,3 +1,7 @@
+Для установки linux-image-4.15.0-20-lowlatency в Ubuntu
+sudo apt update
+sudo apt install linux-image-4.15.0-20-lowlatency
+
 linux-image-4.15.0-20-lowlatency
 https://docs.google.com/presentation/d/1lngP0wc5VKEnFnM3yV4seew32iDsh_aR7Xb94NpJNfU/edit#slide=id.g74c2d2ade3_0_5
 
